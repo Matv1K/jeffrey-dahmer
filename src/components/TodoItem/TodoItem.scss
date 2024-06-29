@@ -1,0 +1,15 @@
+.todo-item {
+  border: 1px solid #333;
+  width: 100%;
+  margin-top: 20px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__remove {
+    cursor: pointer;
+    font-size: 14px;
+  }
+}

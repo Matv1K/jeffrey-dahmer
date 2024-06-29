@@ -1,0 +1,17 @@
+.about {
+  &__form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__items-amount {
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    padding: 5px 10px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #333;
+  }
+}

@@ -1,0 +1,93 @@
+.textarea {
+  max-width: 300px;
+  max-height: 300px;
+  padding: 10px;
+
+  resize: none;
+
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.radioArea {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.radioButton {
+  display: none;
+
+  &:checked + .custom-radioButton::after {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.custom-radioButton {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s ease-in-out;
+  }
+}
+
+.checkbox {
+  display: none;
+
+  &:checked + .custom-checkbox::after {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #333;
+  cursor: pointer;
+  position: relative;
+  border-radius: 50%;
+
+  &::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: blueviolet;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.2s ease;
+  }
+}
+
+.select {
+  margin-top: 20px;
+}
+
+.paragraph-caption {
+  margin-top: 20px;
+}
