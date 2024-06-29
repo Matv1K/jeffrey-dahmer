@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid #333;
+  background-color: #91acce;
+
+  &__nav {
+    .nav__list {
+      display: flex;
+
+      .list__link {
+        list-style: none;
+        margin: 0 15px;
+        text-decoration: none;
+        color: rgb(199, 212, 20);
+        transition: color 0.3s ease;
+        font-size: 20px;
+
+        &:hover {
+          color: darken(rgb(199, 212, 20), 10%);
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  font-weight: 700;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: rgb(199, 212, 20);
+}
