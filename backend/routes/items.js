@@ -14,17 +14,15 @@ router.get("/", async (req, res) => {
 
 // Route to create a new item
 router.post("/", async (req, res) => {
-  const item = new Item({
-    name: req.body.name,
-    description: req.body.description,
-  });
-
   try {
-    const newItem = await item.save();
-
-    res.status(201).json(newItem);
-  } catch (err) {
-    res.status(400).json({ message: err.message });
+    const newItem = new Item({
+      name: req.body.name,
+      description: req.body.description,
+    });
+    const savedItem = await newItem.save();
+    res.status(201).json(savedItem);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
 });
 
