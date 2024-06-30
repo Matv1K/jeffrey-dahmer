@@ -1,0 +1,25 @@
+.form {
+  margin-top: 50px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+fieldset {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  border: 1px solid #333;
+  padding: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 7px 15px;
+}
+
+.figure {
+  display: block;
+  margin: 20px auto;
+  max-width: 300px;
+}
