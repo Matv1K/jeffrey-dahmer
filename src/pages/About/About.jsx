@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
-import "./About.scss";
+import "pages/About/About.scss";
 
-import { TodoItem, Button } from "../../components";
+import { TodoItem, Button } from "components";
 
 const About = () => {
   const [value, setValue] = useState("");

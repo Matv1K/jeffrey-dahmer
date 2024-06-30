@@ -1,6 +1,6 @@
-import "./Contact.scss";
+import "pages/Contact/Contact.scss";
 
-import { Figure } from "../../img";
+import { Figure } from "img";
 
 const Contact = () => {
   return (

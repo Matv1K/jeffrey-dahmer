@@ -1,4 +1,4 @@
-import "./TodoItem.scss";
+import "components/TodoItem/TodoItem.scss";
 
 const TodoItem = ({ title, handleClick }) => {
   return (

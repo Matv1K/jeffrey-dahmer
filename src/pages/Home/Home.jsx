@@ -1,8 +1,8 @@
-import "./Home.scss";
+import "pages/Home/Home.scss";
 
-import { Clothes } from "../../img/";
+import { Clothes } from "img/";
 
-import { Button } from "../../components";
+import { Button } from "components";
 
 const Home = () => {
   return (

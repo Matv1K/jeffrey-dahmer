@@ -1,4 +1,4 @@
-import "./Button.scss";
+import "components/Button/Button.scss";
 
 const Button = ({ children, secondary, onClick, disabled }) => {
   return (

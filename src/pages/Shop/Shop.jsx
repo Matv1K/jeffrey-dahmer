@@ -1,25 +1,36 @@
-import { useState } from "react";
-import "./Shop.scss";
+import { useState, useEffect } from "react";
+import "pages/Shop/Shop.scss";
 
-import { ShoppingCard } from "../../components";
+import { ShoppingCard } from "components";
+
+import { fetchItems } from "api";
 
 const Shop = () => {
-  const [items, setItems] = useState([
-    { id: 1, title: "Item 1", description: "lorem ipsum 1" },
-    { id: 2, title: "Item 2", description: "lorem ipsum 2" },
-    { id: 3, title: "Item 3", description: "lorem ipsum 3" },
-  ]);
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const getItems = async () => {
+      try {
+        const response = await fetchItems();
+        setItems(response.data);
+      } catch (error) {
+        console.error("Error fetching items:", error);
+      }
+    };
+
+    getItems();
+  }, []);
 
   return (
     <ul className="shopping-list">
-      {items.map(({ title, description, id }) => {
+      {items.map(({ title, description, _id }) => {
         return (
           <ShoppingCard
             className="shopping-list__card"
             title={title}
-            description={description}
-            key={id}
-            id={id}
+            description={`${description} + ${_id}`}
+            key={_id}
+            id={_id}
           />
         );
       })}

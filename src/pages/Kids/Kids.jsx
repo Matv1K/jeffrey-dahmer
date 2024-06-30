@@ -1,6 +1,6 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
-import "./Kids.scss";
+import "pages/Kids/Kids.scss";
 
 const Kids = () => {
   const [name, setName] = useState("Matthew");
